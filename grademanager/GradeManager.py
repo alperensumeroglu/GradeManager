@@ -13,15 +13,15 @@ def save_user_info(name,surname,graders):
 def calculate_average(grades):
     return sum(grades) / len(grades) if grades else 0
 def assign_letter_grade(average):
-    if average >= 90:
+    if average >= 90 and average <= 100:
         return 'AA'
-    elif average >= 80:
+    elif average >= 80 and average <= 89:
         return 'BA'
-    elif average >= 70:
+    elif average >= 70 and average <=79:
         return 'BB'
-    elif average >= 60:
+    elif average >= 60 and average <=69:
         return 'CB'
-    elif average >= 50:
+    elif average >= 50 and average <=59:
         return 'CC'
     else:
         return 'FF'
@@ -96,16 +96,3 @@ while not exit_program:
             print('No user information found. Please enter grades first.')
     else:
         print('Invalid option. Please choose again.')
-
-
-
-
-
-
-
-
-
-
-
-
-    
